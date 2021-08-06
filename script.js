@@ -1,6 +1,6 @@
 let number1 = 0;
 let number2 = 0;
-let operation = "nothing";
+let operation = "false";
 const newhtml = "<h1>enter your stuff</h1>"
 
 document.getElementById("calcdisplay").innerHTML = "<h1>asdf</h1>";
@@ -38,6 +38,12 @@ function divide() {
     return null;
 }
 
-if (operation = "true") {
-    
+function one() {
+    if (operation = "false") {
+        number1 = 1;
+        console.log(number1);
+    } if (operation) {
+        number2 = 2;
+        console.log(number2);
+    }
 }
