@@ -159,13 +159,15 @@ function zero() {
 function equal() {    
     if (whichOne == "plus") {
         result = number1 + number2;
+        console.log(result)
     } if (whichOne == "minus") {
         result = number1 - number2;
+        console.log(result)
     } if (whichOne == "multiply") {
         result = number1 * number2;
+        console.log(result)
     } if (whichOne == "divide") {
         result = number1 / number2;
+        console.log(result);
     }
 }
-
-console.log(result);

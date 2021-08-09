@@ -14,34 +14,41 @@
     <button onclick="one()">1</button>
     <button onclick="two()">2</button>
     <button onclick="three()">3</button>
-    <button class="plus" onclick="plus()">+</button>
+    <button class="operation" onclick="plus()">+</button>
     <br />
     <button onclick="four()">4</button>
     <button onclick="five()">5</button>
     <button onclick="six()">6</button>
-    <button class="minus" onclick="minus()">-</button>
+    <button class="operation" onclick="minus()">-</button>
     <br />
     <button onclick="seven()">7</button>
     <button onclick="eight()">8</button>
     <button onclick="nine()">9</button>
-    <button class="multiply" onclick="multiply()">x</button>
+    <button class="operation" onclick="multiply()">x</button>
     <br />
     <button class="clear" onclick="clear()">C</button>
     <button onclick="">0</button>
     <button class="equal" onclick="equal()">=</button>
-    <button class="divide" onclick="divide()">/</button>
+    <button class="operation" onclick="divide()">/</button>
 
 <style>
     button {
+        margin: 3px;
+        background-color: rgb(207, 200, 192);
         width: 100px;
         height: 40px;
         font-size: 30px;
     }
     button.clear {
+        background-color: rgb(153, 149, 145);
         width: 70px;
     }
     button.equal {
         width: 130px;
+        background-color: rgb(218, 128, 25);
+    }
+    button.operation {
+        background-color: rgb(153, 149, 145)
     }
 </style>
 
