@@ -1,8 +1,10 @@
 let number1 = 0;
 let number2 = 0;
 let operation = "false";
-const newhtml = "<h1>enter your stuff</h1>"
+let newhtml = "<h1>enter your stuff</h1>"
 let result = 0;
+
+document.getElementById("calcdisplay").innerHTML = newhtml;
 
 function clear() {
     number1 = 0;
@@ -14,33 +16,46 @@ function clear() {
 }
 
 function refresh() {
+    document.getElementById("calcdisplay").innerHTML = newhtml;
+}
+
+function clear() {
+    console.log("cleared");
     number1 = 0;
     number2 = 0;
-    // will include new html
-    return null;
+    result = 0;
+    newhtml = "<h1>enter your stuff</h1>";
+    refresh();
 }
 
 function plus() {
     operation = "true";
     whichOne = "plus"
+    newhtml = "<h1>" + number1 + " + " + number2 + "<h1>";
+    refresh();
     return null;
 }
 function minus() {
     operation = "true";
     whichOne = "minus"
+    newhtml = "<h1>" + number1 + " - " + number2 + "<h1>";
+    refresh();
     return null;
 }
 function multiply() {
     operation = "true";
-    whichOne = "multiply"
+    whichOne = "multiply";
+    newhtml = "<h1>" + number1 + " x " + number2 + "<h1>";
+    refresh();
     return null;
 }
 function divide() {
     operation = "true";
     whichOne = "divide"
+    newhtml = "<h1>" + number1 + " / " + number2 + "<h1>";
+    refresh();
     return null;
 }
-
 
 // number functions
 function one() {
@@ -53,7 +68,6 @@ function one() {
     }
     return null;
 }
-
 function two() {
     if (operation == "false") {
         number1 = 2;
@@ -64,7 +78,6 @@ function two() {
     }
     return null;
 }
-
 function three() {
     if (operation == "false") {
         number1 = 3;
@@ -75,7 +88,6 @@ function three() {
     }
     return null;
 }
-
 function four() {
     if (operation == "false") {
         number1 = 4;
@@ -86,7 +98,6 @@ function four() {
     }
     return null;
 }
-
 function five() {
     if (operation == "false") {
         number1 = 5;
@@ -97,7 +108,6 @@ function five() {
     }
     return null;
 }
-
 function six() {
     if (operation == "false") {
         number1 = 6;
@@ -108,7 +118,6 @@ function six() {
     }
     return null;
 }
-
 function seven() {
     if (operation == "false") {
         number1 = 7;
@@ -120,7 +129,6 @@ function seven() {
     return null;
 
 }
-
 function eight() {
     if (operation == "false") {
         number1 = 8;
@@ -131,7 +139,6 @@ function eight() {
     }
     return null;
 }
-
 function nine() {
     if (operation == "false") {
         number1 = 9;
@@ -142,7 +149,6 @@ function nine() {
     }
     return null;
 }
-
 function zero() {
     if (operation == "false") {
         number1 = 0;
@@ -153,7 +159,6 @@ function zero() {
     }
     return null;
 }
-
 // end of number array
 
 function equal() {    
@@ -163,11 +168,14 @@ function equal() {
     } if (whichOne == "minus") {
         result = number1 - number2;
         console.log(result)
-    } if (whichOne == "multiply") {
+    } if (whichOne == "multiply") { 
         result = number1 * number2;
         console.log(result)
     } if (whichOne == "divide") {
         result = number1 / number2;
+        newhtml = result;
         console.log(result);
     }
 }
+
+refresh();
