@@ -33,7 +33,7 @@ function plus() {
     operation = "true";
     whichOne = "plus"
     symbol = "+";
-    newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";    
     refresh();
     return null;
 }
@@ -41,15 +41,15 @@ function minus() {
     operation = "true";
     whichOne = "minus";
     symbol = "-";
-    newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
     refresh();
     return null;
 }
 function multiply() {
     operation = "true";
-    whichOne = "mutiply";
+    whichOne = "multiply";
     symbol = "x";
-    newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
     refresh();
     return null;
 }
@@ -57,7 +57,7 @@ function divide() {
     operation = "true";
     whichOne = "divide"
     symbol = "/";
-    newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
     refresh();
     return null;
 }
@@ -67,7 +67,7 @@ function one() {
     if (operation == "false") {
         number1 = 1;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 1;
@@ -81,7 +81,7 @@ function two() {
     if (operation == "false") {
         number1 = 2;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 2;
@@ -95,7 +95,7 @@ function three() {
     if (operation == "false") {
         number1 = 3;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 3;
@@ -109,7 +109,7 @@ function four() {
     if (operation == "false") {
         number1 = 4;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 4;
@@ -123,7 +123,7 @@ function five() {
     if (operation == "false") {
         number1 = 5;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 5;
@@ -137,7 +137,7 @@ function six() {
     if (operation == "false") {
         number1 = 6;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 6;
@@ -151,7 +151,7 @@ function seven() {
     if (operation == "false") {
         number1 = 7;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 7;
@@ -166,7 +166,7 @@ function eight() {
     if (operation == "false") {
         number1 = 8;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 8;
@@ -180,7 +180,7 @@ function nine() {
     if (operation == "false") {
         number1 = 9;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 9;
@@ -194,7 +194,7 @@ function zero() {
     if (operation == "false") {
         number1 = 0;
         console.log(number1)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        newhtml = "<h1>" + number1 + "<h1>";
         refresh();
     } if (operation == "true") {
         number2 = 0;
