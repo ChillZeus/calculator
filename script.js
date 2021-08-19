@@ -7,15 +7,6 @@ let symbol = "?";
 
 document.getElementById("calcdisplay").innerHTML = newhtml;
 
-function clear() {
-    number1 = 0;
-    number2 = 0;
-    operation = "nothing";
-    newhtml = "<h1>cleared</h1>";
-    // cleared is placeholder
-    return null;
-}
-
 function refresh() {
     document.getElementById("calcdisplay").innerHTML = newhtml;
 }
@@ -227,6 +218,16 @@ function equal() {
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
         refresh();
     }
+}
+
+function clear() {
+    number1 = 0;
+    number2 = 0;
+    operation = "nothing";
+    newhtml = "<h1>cleared</h1>";
+    // cleared is placeholder
+    refresh()
+    return null;
 }
 
 refresh();
