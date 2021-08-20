@@ -1,5 +1,5 @@
-let number1 = 0;
-let number2 = 0;
+let number1 = null;
+let number2 = null;
 let operation = "false";
 let newhtml = "<h1>enter your stuff</h1>"
 let result = 0;
@@ -53,6 +53,18 @@ function divide() {
     newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
     refresh();
     return null;
+}
+
+function pi() {
+    if (number1 == null) {
+        newhtml = "<h1>enter your stuff</h1>";
+        whichOne = "pi";
+        refresh();
+    } if (number1 > 0) {
+        whichOne = "pi";
+        newhtml = "<h1>" + number1 + " x " + " π " + "</h1>"
+        refresh();
+    }
 }
 
 // number functions
@@ -218,6 +230,10 @@ function equal() {
     } if (whichOne == "divide") {
         result = number1 / number2;
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        refresh();
+    } if (whichOne == "pi") {
+        result = number1 * 3.14;
+        newhtml = "<h1>" + number1 + " x π " + " = " + result + "<h1>";
         refresh();
     }
 }
