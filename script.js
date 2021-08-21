@@ -4,6 +4,7 @@ let operation = "false";
 let newhtml = "<h1>enter your stuff</h1>"
 let result = 0;
 let symbol = "?";
+let memory = 0;
 
 //document.getElementById("calcdisplay").innerHTML = newhtml;
 
@@ -214,28 +215,38 @@ function zero() {
 function equal() {    
     if (whichOne == "plus") {
         result = number1 + number2;
+        memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
         refresh();
     } if (whichOne == "minus") {
         result = number1 - number2;
+        memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
         refresh();
     } if (whichOne == "multiply") { 
         result = number1 * number2;
+        memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
         refresh();
     } if (whichOne == "divide") {
         result = number1 / number2;
+        memory = result;
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
         refresh();
     } if (whichOne == "pi") {
         result = number1 * 3.14;
+        memory = result;
         newhtml = "<h1>" + number1 + " x π " + " = " + result + "<h1>";
         refresh();
     }
+}
+
+function getMemory() {
+    newhtml = "<h1>" + memory + "<h1>";
+    refresh();
 }
 
 refresh();
