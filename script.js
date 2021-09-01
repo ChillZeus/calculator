@@ -218,28 +218,33 @@ function equal() {
         memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "minus") {
         result = number1 - number2;
         memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "multiply") { 
         result = number1 * number2;
         memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "divide") {
         result = number1 / number2;
         memory = result;
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "pi") {
         result = number1 * 3.14;
         memory = result;
         newhtml = "<h1>" + number1 + " x π " + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     }
 }
