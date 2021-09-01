@@ -241,7 +241,7 @@ function equal() {
         operation = "false";
         refresh();
     } if (whichOne == "pi") {
-        result = number1 * 3.14;
+        result = number1 * 3.1415926535;
         memory = result;
         newhtml = "<h1>" + number1 + " x π " + " = " + result + "<h1>";
         operation = "false";
