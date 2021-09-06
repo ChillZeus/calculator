@@ -219,6 +219,7 @@ function equal() {
         memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "minus") {
         operation = "false"
@@ -226,6 +227,7 @@ function equal() {
         memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "multiply") { 
         operation = "false"
@@ -233,18 +235,25 @@ function equal() {
         memory = result;
         console.log(result)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "divide") {
         operation = "false"
         result = number1 / number2;
         memory = result;
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     } if (whichOne == "pi") {
+<<<<<<< HEAD
         operation = "false"
         result = number1 * 3.14;
+=======
+        result = number1 * 3.1415926535;
+>>>>>>> d70419199ff823313c58cdbf20ea35782a0e048f
         memory = result;
         newhtml = "<h1>" + number1 + " x π " + " = " + result + "<h1>";
+        operation = "false";
         refresh();
     }
 }
