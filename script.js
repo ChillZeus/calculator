@@ -1,6 +1,8 @@
-let number1 = null;
-let number2 = null;
-let operation = "false";
+let number1 = "";
+let number2 = "";
+let number3 = "";
+let number4 = "";
+let operation = 1;
 let newhtml = "<h1>enter your stuff</h1>"
 let result = 0;
 let symbol = "?";
@@ -11,6 +13,9 @@ let memory = 0;
 function refresh() {
     document.getElementById("calcdisplay").innerHTML = newhtml;
 }
+
+const numberArray = []
+
 
 function clearDisplay() {
     console.log("cleared");
@@ -24,7 +29,7 @@ function clearDisplay() {
 }
 
 function plus() {
-    operation = "true";
+    operation = operation + 1;
     whichOne = "plus"
     symbol = "+";
     newhtml = "<h1>" + number1 + " " + symbol + "<h1>";    
@@ -32,7 +37,7 @@ function plus() {
     return null;
 }
 function minus() {
-    operation = "true";
+    operation = operation + 1;
     whichOne = "minus";
     symbol = "-";
     newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
@@ -40,7 +45,7 @@ function minus() {
     return null;
 }
 function multiply() {
-    operation = "true";
+    operation = operation + 1;
     whichOne = "multiply";
     symbol = "x";
     newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
@@ -48,7 +53,7 @@ function multiply() {
     return null;
 }
 function divide() {
-    operation = "true";
+    operation = operation + 1;
     whichOne = "divide"
     symbol = "/";
     newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
@@ -70,33 +75,50 @@ function pi() {
 
 // number functions
 function one() {
-    if (operation == "false") {
-        number1 = 1;
+    if (operation == 1) {
+        number1 = number1 + '1';
         console.log(number1)
         newhtml = "<h1>" + number1 + "<h1>";
         refresh();
-    } if (operation == "true") {
-        number2 = 1;
+    } if (operation == 2) {
+        number2 = number2 + '1';
         console.log(number2)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
         refresh();
+    } if (operation == 3) {
+        number3 = number3 + '1';
+        console.log(number2)
+        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        refresh();
+    } if (operation == 4) {
+    		number4 = number4 + '1'
+        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
     }
     return null;
 }
 function two() {
-    if (operation == "false") {
-        number1 = 2;
+    if (operation == 1) {
+        number1 = number1 + '2';
         console.log(number1)
         newhtml = "<h1>" + number1 + "<h1>";
         refresh();
-    } if (operation == "true") {
-        number2 = 2;
+    } if (operation == 2) {
+        number2 = number2 + '2';
         console.log(number2)
         newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
         refresh();
+    } if (operation == 3) {
+        number3 = number3 + '2';
+        console.log(number2)
+        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
+        refresh();
+    } if (operation == 4) {
+    		number4 = number4 + '2'
+        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
     }
     return null;
 }
+
 function three() {
     if (operation == "false") {
         number1 = 3;
