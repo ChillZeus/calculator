@@ -1,8 +1,3 @@
-let number1 = "";
-let number2 = "";
-let number3 = "";
-let number4 = "";
-let operation = 1;
 let newhtml = "<h1>enter your stuff</h1>"
 let result = 0;
 let symbol = "?";
@@ -14,13 +9,11 @@ function refresh() {
     document.getElementById("calcdisplay").innerHTML = newhtml;
 }
 
-const numberArray = []
-
+let equation = [];
 
 function clearDisplay() {
     console.log("cleared");
-    number1 = 0;
-    number2 = 0;
+    equation = [];
     result = 0;
     operation = "false";
     newhtml = "<h1>enter your stuff</h1>";
@@ -28,35 +21,24 @@ function clearDisplay() {
     return null;
 }
 
+
 function plus() {
-    operation = operation + 1;
-    whichOne = "plus"
-    symbol = "+";
-    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";    
+    equation.push("+")
     refresh();
     return null;
 }
 function minus() {
-    operation = operation + 1;
-    whichOne = "minus";
-    symbol = "-";
-    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
+    equation.push("-")
     refresh();
     return null;
 }
 function multiply() {
-    operation = operation + 1;
-    whichOne = "multiply";
-    symbol = "x";
-    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
+    equation.push("x")
     refresh();
     return null;
 }
 function divide() {
-    operation = operation + 1;
-    whichOne = "divide"
-    symbol = "/";
-    newhtml = "<h1>" + number1 + " " + symbol + "<h1>";
+    equation.push("/")
     refresh();
     return null;
 }
