@@ -10,6 +10,7 @@ function refresh() {
 }
 
 let equation = [];
+let toPush = 0;
 
 function clearDisplay() {
     console.log("cleared");
@@ -23,262 +24,46 @@ function clearDisplay() {
 
 
 function plus() {
+    equation.push(toPush)
     equation.push("+")
     refresh();
-    return null;
+    toPush = 0;
 }
 function minus() {
+    equation.push(toPush)
     equation.push("-")
     refresh();
-    return null;
+    toPush = 0;
 }
 function multiply() {
+    equation.push(toPush)
     equation.push("x")
     refresh();
-    return null;
+    toPush = 0;
 }
 function divide() {
+    equation.push(toPush)
     equation.push("/")
     refresh();
-    return null;
-}
-
-function pi() {
-    if (number1 == null) {
-        newhtml = "<h1>enter your stuff</h1>";
-        whichOne = "pi";
-        refresh();
-    } if (number1 > 0) {
-        whichOne = "pi";
-        newhtml = "<h1>" + number1 + " x " + " π " + "</h1>"
-        refresh();
-    }
+    toPush = 0;
 }
 
 // number functions
-function one() {
-    if (operation == 1) {
-        number1 = number1 + '1';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '1';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '1';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '1'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function two() {
-    if (operation == 1) {
-        number1 = number1 + '2';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '2';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '2';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '2'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
+function one() { toPush = toPush * 10; toPush += 1; }
+function two() { toPush = toPush * 10; toPush += 2; }
+function three() { toPush = toPush * 10; toPush += 3; }
+function four() { toPush = toPush * 10; toPush += 4; }
+function five() { toPush = toPush * 10; toPush += 5; }
+function six() { toPush = toPush * 10; toPush += 6; }
+function seven() { toPush = toPush * 10; toPush += 7; }
+function eight() { toPush = toPush * 10; toPush += 8; }
+function nine() { toPush = toPush * 10; toPush += 9; }
+function zero() { toPush = toPush * 10; }
 
-function three() {
-    if (operation == 1) {
-        number1 = number1 + '3';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '3';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '3';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '3'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function four() {
-    if (operation == 1) {
-        number1 = number1 + '4';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '4';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '4';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '4'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function five() {
-    if (operation == 1) {
-        number1 = number1 + '5';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '5';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '5';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '5'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function six() {
-    if (operation == 1) {
-        number1 = number1 + '6';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '6';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '6';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '6'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function seven() {
-    if (operation == 1) {
-        number1 = number1 + '7';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '7';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '7';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '7'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function eight() {
-    if (operation == 1) {
-        number1 = number1 + '8';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '8';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '8';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '8'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function nine() {
-    if (operation == 1) {
-        number1 = number1 + '9';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '9';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '9';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '9'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
-function zero() {
-    if (operation == 1) {
-        number1 = number1 + '0';
-        console.log(number1)
-        newhtml = "<h1>" + number1 + "<h1>";
-        refresh();
-    } if (operation == 2) {
-        number2 = number2 + '0';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 3) {
-        number3 = number3 + '0';
-        console.log(number2)
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-        refresh();
-    } if (operation == 4) {
-    		number4 = number4 + '0'
-        newhtml = "<h1>" + number1 + " " + symbol +  " " + number2 + "<h1>";
-    }
-    return null;
-}
 // end of number array
 
+
+// this definitely does not work
 function equal() {    
     if (whichOne == "plus") {
         operation = 0
